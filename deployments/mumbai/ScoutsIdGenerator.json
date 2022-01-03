@@ -1,0 +1,144 @@
+{
+  "address": "0xa5299B89c5f1e8A6D525B801f42342dc18335964",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "REDEEMER_TICKET",
+      "outputs": [
+        {
+          "internalType": "enum RedeemersTypes",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_redeemerType",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getScoutId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "typeBounds",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_redeemerType",
+          "type": "uint8"
+        }
+      ],
+      "name": "typeName",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xb698474939e07e89f90291a5ae68dbe8ccbea4c253804f2017c9c2457f0edb64",
+  "receipt": {
+    "to": null,
+    "from": "0xac78bce6Df7C4976BBBC79BF10351dC56A86Ed4F",
+    "contractAddress": "0xa5299B89c5f1e8A6D525B801f42342dc18335964",
+    "transactionIndex": 1,
+    "gasUsed": "217400",
+    "logsBloom": "0x00000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000800000000000000000000100000000000000000000000000000000000000000000000001000000000080000000000000000000000000000000000000200000000000000040000000000000000000000000200000000000000020000000000000000001000000000000000000000000004000000000000000000001000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000000000100000",
+    "blockHash": "0x057ef295f3010ec31c8debd6635fd5d5ff1f9bf05accfd2591ef1f297657aa71",
+    "transactionHash": "0xb698474939e07e89f90291a5ae68dbe8ccbea4c253804f2017c9c2457f0edb64",
+    "logs": [
+      {
+        "transactionIndex": 1,
+        "blockNumber": 23366996,
+        "transactionHash": "0xb698474939e07e89f90291a5ae68dbe8ccbea4c253804f2017c9c2457f0edb64",
+        "address": "0x0000000000000000000000000000000000001010",
+        "topics": [
+          "0x4dfe1bbbcf077ddc3e01291eea2d5c70c2b422b415d95645b9adcfd678cb1d63",
+          "0x0000000000000000000000000000000000000000000000000000000000001010",
+          "0x000000000000000000000000ac78bce6df7c4976bbbc79bf10351dc56a86ed4f",
+          "0x000000000000000000000000c26880a0af2ea0c7e8130e6ec47af756465452e8"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000000001ee4f746f78000000000000000000000000000000000000000000000000001be46e4c3f1174a100000000000000000000000000000000000000000000041d672b0a9848f87e030000000000000000000000000000000000000000000000001be27ffccaa1fca100000000000000000000000000000000000000000000041d672cf8e7bd67f603",
+        "logIndex": 22,
+        "blockHash": "0x057ef295f3010ec31c8debd6635fd5d5ff1f9bf05accfd2591ef1f297657aa71"
+      }
+    ],
+    "blockNumber": 23366996,
+    "cumulativeGasUsed": "486953",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "455709a2f93d8ebd47c9b11d14d74639",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"REDEEMER_TICKET\",\"outputs\":[{\"internalType\":\"enum RedeemersTypes\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_redeemerType\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"getScoutId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"typeBounds\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_redeemerType\",\"type\":\"uint8\"}],\"name\":\"typeName\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"ScoutsIdGenerator implementation When we generate the scouts skills and properties we take into account not only the random number(s) that comes along with it but also which contract minted it. We call such contract a Redeemer. We are starting with just one Redeemer (Tickets) that uses from id 0 to 4699;\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"REDEEMER_TICKET()\":{\"notice\":\"This is just so the different types are visible in the ABI\"},\"getScoutId(uint8,uint256)\":{\"notice\":\"We use uint8 instead of the Types enum because Scouts.sol is not upgradeable.\"},\"typeBounds()\":{\"notice\":\"This is just a helper function to help with transparency\"},\"typeName(uint8)\":{\"notice\":\"This is just a helper function to help with transparency\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/ScoutsIdGenerator.sol\":\"ScoutsIdGenerator\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"contracts/IScoutsIdGenerator.sol\":{\"content\":\"pragma solidity ^0.8.9;\\n// SPDX-License-Identifier: MIT\\n\\nimport \\\"./Redeemers.sol\\\";\\n\\n///@dev The interface we couple Scouts contract to\\ninterface IScoutsIdGenerator {\\n  function getScoutId(uint8 _redeemerName, uint256 _tokenId) pure external returns (uint256);\\n}\",\"keccak256\":\"0xd82b3bc9e1da22cb4d56f614e074c4d075a963c92d3f8767b6046cd59a2ac657\",\"license\":\"MIT\"},\"contracts/Redeemers.sol\":{\"content\":\"pragma solidity ^0.8.9;\\n// SPDX-License-Identifier: MIT\\n\\n/**\\n * @dev This library exists just to avoid typos and\\n * magic numbers when passing Types around and does so by sharing\\n * the Types between ScoutsIdGenerator and Redeemers\\n */\\n\\nenum RedeemersTypes { Tickets }\\n\",\"keccak256\":\"0x2a86da8e2418c4eef4ee58827930dd2167e20644e26a247a4eaa30b2b59d601d\",\"license\":\"MIT\"},\"contracts/ScoutsIdGenerator.sol\":{\"content\":\"pragma solidity ^0.8.9;\\n// SPDX-License-Identifier: MIT\\n\\nimport \\\"./IScoutsIdGenerator.sol\\\";\\nimport \\\"./Redeemers.sol\\\";\\n\\n/**\\n * @dev ScoutsIdGenerator implementation\\n *\\n * When we generate the scouts skills and properties we take into account not\\n * only the random number(s) that comes along with it but also which contract\\n * minted it. We call such contract a Redeemer.\\n *\\n * We are starting with just one Redeemer (Tickets) that uses from id 0 to 4699;\\n *\\n */\\ncontract ScoutsIdGenerator is IScoutsIdGenerator {\\n  ///This is just so the different types are visible in the ABI\\n  RedeemersTypes public constant REDEEMER_TICKET = RedeemersTypes.Tickets;\\n\\n  ///We use uint8 instead of the Types enum because Scouts.sol is not upgradeable.\\n  function getScoutId(uint8 _redeemerType, uint256 _tokenId) public pure returns (uint256) {\\n    if (_redeemerType == uint8(RedeemersTypes.Tickets)) {\\n      // First 4699 scouts reserved for Pioneers\\n      require(_tokenId < 4700, \\\"Only 4700 Pioneers should be available\\\");\\n      return(_tokenId);\\n    } else {\\n      revert('invalid redeemerType');\\n    }\\n  }\\n\\n  ///This is just a helper function to help with transparency\\n  function typeBounds() public pure returns(uint8, uint8) {\\n    return(uint8(type(RedeemersTypes).min), uint8(type(RedeemersTypes).max));\\n  }\\n\\n  ///This is just a helper function to help with transparency\\n  function typeName(uint8 _redeemerType) public pure returns(string memory) {\\n    if (_redeemerType == uint8(RedeemersTypes.Tickets)) {\\n      return \\\"Tickets\\\";\\n    }\\n\\n    revert(\\\"Not existing\\\");\\n  }\\n}\",\"keccak256\":\"0x535a15c8e376bce6071d3518a3b35729c7a65903b7f0a12c48ce944932b1140b\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506102f8806100206000396000f3fe608060405234801561001057600080fd5b506004361061004c5760003560e01c8063323b58ea146100515780635f8562171461006f578063805ea39114610090578063bd7a8355146100a4575b600080fd5b610059600081565b60405161006691906101e3565b60405180910390f35b61008261007d366004610221565b6100c4565b604051908152602001610066565b604080516000808252602082015201610066565b6100b76100b236600461024b565b61017f565b604051610066919061026d565b600060ff831661013a5761125c82106101335760405162461bcd60e51b815260206004820152602660248201527f4f6e6c7920343730302050696f6e656572732073686f756c6420626520617661604482015265696c61626c6560d01b60648201526084015b60405180910390fd5b5080610179565b60405162461bcd60e51b8152602060048201526014602482015273696e76616c69642072656465656d65725479706560601b604482015260640161012a565b92915050565b606060ff82166101ac5750506040805180820190915260078152665469636b65747360c81b602082015290565b60405162461bcd60e51b815260206004820152600c60248201526b4e6f74206578697374696e6760a01b604482015260640161012a565b602081016001831061020557634e487b7160e01b600052602160045260246000fd5b91905290565b803560ff8116811461021c57600080fd5b919050565b6000806040838503121561023457600080fd5b61023d8361020b565b946020939093013593505050565b60006020828403121561025d57600080fd5b6102668261020b565b9392505050565b600060208083528351808285015260005b8181101561029a5785810183015185820160400152820161027e565b818111156102ac576000604083870101525b50601f01601f191692909201604001939250505056fea26469706673582212202cb6f9c30ce01bc9b318962c68c392e1cfabcdb53f5813360bcf256492c0a72564736f6c63430008090033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061004c5760003560e01c8063323b58ea146100515780635f8562171461006f578063805ea39114610090578063bd7a8355146100a4575b600080fd5b610059600081565b60405161006691906101e3565b60405180910390f35b61008261007d366004610221565b6100c4565b604051908152602001610066565b604080516000808252602082015201610066565b6100b76100b236600461024b565b61017f565b604051610066919061026d565b600060ff831661013a5761125c82106101335760405162461bcd60e51b815260206004820152602660248201527f4f6e6c7920343730302050696f6e656572732073686f756c6420626520617661604482015265696c61626c6560d01b60648201526084015b60405180910390fd5b5080610179565b60405162461bcd60e51b8152602060048201526014602482015273696e76616c69642072656465656d65725479706560601b604482015260640161012a565b92915050565b606060ff82166101ac5750506040805180820190915260078152665469636b65747360c81b602082015290565b60405162461bcd60e51b815260206004820152600c60248201526b4e6f74206578697374696e6760a01b604482015260640161012a565b602081016001831061020557634e487b7160e01b600052602160045260246000fd5b91905290565b803560ff8116811461021c57600080fd5b919050565b6000806040838503121561023457600080fd5b61023d8361020b565b946020939093013593505050565b60006020828403121561025d57600080fd5b6102668261020b565b9392505050565b600060208083528351808285015260005b8181101561029a5785810183015185820160400152820161027e565b818111156102ac576000604083870101525b50601f01601f191692909201604001939250505056fea26469706673582212202cb6f9c30ce01bc9b318962c68c392e1cfabcdb53f5813360bcf256492c0a72564736f6c63430008090033",
+  "devdoc": {
+    "details": "ScoutsIdGenerator implementation When we generate the scouts skills and properties we take into account not only the random number(s) that comes along with it but also which contract minted it. We call such contract a Redeemer. We are starting with just one Redeemer (Tickets) that uses from id 0 to 4699;",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "REDEEMER_TICKET()": {
+        "notice": "This is just so the different types are visible in the ABI"
+      },
+      "getScoutId(uint8,uint256)": {
+        "notice": "We use uint8 instead of the Types enum because Scouts.sol is not upgradeable."
+      },
+      "typeBounds()": {
+        "notice": "This is just a helper function to help with transparency"
+      },
+      "typeName(uint8)": {
+        "notice": "This is just a helper function to help with transparency"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}
