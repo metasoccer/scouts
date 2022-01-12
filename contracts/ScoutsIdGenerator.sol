@@ -32,13 +32,12 @@ contract ScoutsIdGenerator is IScoutsIdGenerator {
       // First 4699 scouts reserved for Pioneers
       require(_tokenId <= TICKETS_MAX_ID, "Only 4700 Pioneers should be available");
       return(_tokenId);
-    } else if (_redeemerType == uint8(RedeemersTypes.TicketsV2)) {
-      uint256 scoutId = TICKETS_MAX_ID + _tokenId;
-      require(scoutId <= TICKETS_V2_MAX_ID, "Only 12000 TicketsV2 scouts should be available");
-      return scoutId;
-    } else {
-      revert('invalid redeemerType');
     }
+    require(_redeemerType == uint8(RedeemersTypes.TicketsV2), 'invalid redeemerType');
+    // First Scout from v2 tickets should have ID 4700 so we need to add 1 to make it so for tokenId 0
+    uint256 scoutId = TICKETS_MAX_ID + _tokenId + 1;
+    require(scoutId <= TICKETS_V2_MAX_ID, "Only 12000 TicketsV2 scouts should be available");
+    return scoutId;
   }
 
   ///This is just a helper function to help with transparency
@@ -50,6 +49,8 @@ contract ScoutsIdGenerator is IScoutsIdGenerator {
   function typeName(uint8 _redeemerType) public pure returns(string memory) {
     if (_redeemerType == uint8(RedeemersTypes.Tickets)) {
       return "Tickets";
+    } else if (_redeemerType == uint8(RedeemersTypes.TicketsV2)) {
+      return "TicketsV2";
     }
 
     revert("Not existing");

@@ -32,8 +32,8 @@ contract EntropyManager is IEntropyManager, VRFConsumerBase, TokenWithdraw {
   event EntropyReceived(address indexed targetAddress, uint256 indexed tokenId, uint256 indexed index, uint256 value);
 
   bytes32 public constant REQUESTER_ROLE = keccak256("REQUESTER_ROLE");
-  bytes32 public VRFKey;
-  uint256 public VRFFee;
+  bytes32 public immutable VRFKey;
+  uint256 public immutable VRFFee;
 
   struct Request {
     bool    finished;
@@ -54,7 +54,7 @@ contract EntropyManager is IEntropyManager, VRFConsumerBase, TokenWithdraw {
     address => mapping(
       uint256 => mapping(uint256 => Request)
     )
-  ) tokenEntropyRequest;
+  ) public tokenEntropyRequest;
 
   constructor(address _VRFCoordinator, bytes32 _VRFKey, address _linkToken, uint256 _fee) 
     VRFConsumerBase(
@@ -68,7 +68,7 @@ contract EntropyManager is IEntropyManager, VRFConsumerBase, TokenWithdraw {
   }
 
   function requestEntropy(address _address, uint256 _tokenId, uint256 _index) external onlyRole(REQUESTER_ROLE) {
-    require(tokenEntropyRequest[_address][_tokenId][_index].requested == false, "Request already performed");
+    require(!tokenEntropyRequest[_address][_tokenId][_index].requested, "Request already performed");
     Request memory request = Request(false, true, _address, _tokenId, _index, 0);
     bytes32 requestId = getRandomNumber();
     entropyRequests[requestId] = request;
@@ -96,13 +96,4 @@ contract EntropyManager is IEntropyManager, VRFConsumerBase, TokenWithdraw {
     entropyRequests[requestId] = request;
     emit EntropyReceived(request.targetAddress, request.tokenId, request.index, request.value);
   }
-
-  function setVRFKey(bytes32 _newKey) external onlyRole(DEFAULT_ADMIN_ROLE) {
-    VRFKey = _newKey;
-  }
-
-  function setVRFFee(uint256 _fee) external onlyRole(DEFAULT_ADMIN_ROLE) {
-    VRFFee = _fee;
-  }
-
 }

@@ -28,10 +28,10 @@ contract TicketsRedeemer is AccessControl, ReentrancyGuard {
 
   event TicketRedeemed(uint256 indexed ticketId, uint256 indexed scoutId, address indexed owner);
 
-  RedeemersTypes public redeemerType;
-  uint8 public requiredSeeds;
-  IBurnableVoucher public ticketsContract;
-  YouthScouts public scoutsContract;
+  RedeemersTypes public immutable redeemerType;
+  uint8 public immutable requiredSeeds;
+  IBurnableVoucher public immutable ticketsContract;
+  YouthScouts public immutable scoutsContract;
 
   constructor(address _scoutsAddress, address _ticketsAddress, uint8 _requiredSeeds, RedeemersTypes _redeemerType) {
     ticketsContract = IBurnableVoucher(_ticketsAddress); /// Original ERC72 to exchange for a Scout

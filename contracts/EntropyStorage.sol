@@ -37,14 +37,15 @@ contract EntropyStorage is AccessControl {
   }
   
   function getEntropy(uint256 _tokenId, uint256 _index) public view returns (uint256) {
-    require(hasEntropy(_tokenId, _index), "Queried non-existent entropy");
-    return entropyStorage[_tokenId][_index].value;
+    Entropy memory entropy = entropyStorage[_tokenId][_index];
+    require(entropy.finished, "Queried non-existent entropy");
+    return entropy.value;
   }
 
   function setEntropy(uint256 _tokenId, uint256 _index, uint256 _randomness) external onlyRole(SET_ENTROPY_ROLE) {
     Entropy memory entropy = entropyStorage[_tokenId][_index];
     ///@notice Once set, entropy can't be changed
-    require(entropy.finished == false, "Setting existent entropy");
+    require(!entropy.finished, "Setting existent entropy");
     entropy.value = _randomness;
     entropy.finished = true;
     entropyStorage[_tokenId][_index] = entropy;

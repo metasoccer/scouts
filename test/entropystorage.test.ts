@@ -1,7 +1,7 @@
-import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/dist/src/signers";
+import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import { expect } from "chai";
 import { ethers } from "hardhat";
-import { EntropyStorage, EntropyStorage__factory } from "../typechain-types";
+import { EntropyStorage } from "../typechain-types";
 
 describe("EntropyStorage", () => {
   let entropyStorage: EntropyStorage;
@@ -9,7 +9,7 @@ describe("EntropyStorage", () => {
   const indexId = Math.floor(Math.random() * 100);
 
   beforeEach(async () => {
-    const storageFactory = await ethers.getContractFactory<EntropyStorage__factory>("EntropyStorage");
+    const storageFactory = await ethers.getContractFactory("EntropyStorage");
     entropyStorage = await storageFactory.deploy();
     await entropyStorage.deployed();
   });
@@ -24,7 +24,7 @@ describe("EntropyStorage", () => {
   describe("getEntropy", () => {
     it("Should revert if token or index do not exists", async () => {
       const r = entropyStorage.getEntropy(tokenId, indexId);
-      await  expect(r).to.be.revertedWith("Queried non-existent entropy");
+      await expect(r).to.be.revertedWith("Queried non-existent entropy");
     });
   });
   describe("setEntropy", () => {
